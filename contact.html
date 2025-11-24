@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Auto Galaxy </title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1> Форма Замовлення </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"> Головна </a> 
+                </li>
+                <li>
+                    <a href="catalog.html">Каталог</a>
+                </li>
+                <li>
+                    <a href="contact.html"> Форма </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <form>
+        <label for="firstName"> Ім’я: </label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+        <label for="lastName"> Прізвище: </label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+        <label for="email"> Електронна пошта: </label>
+        <input type="email" id="email" name="email" required><br><br>
+        <h2>Ви вибрали:</h2>
+    <ul id="carList"></ul>
+    <script src="main.js"></script>
+     <button type="submit">Підтвердити замовлення</button>
+        <button onclick="window.location.href='catalog.html'"> Повернутись до каталогу </button>
+    </form>
+</body>
+</html>

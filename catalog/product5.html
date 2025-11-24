@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> autogalaxy </title>
+    <link rel="stylesheet" href="product5.css">
+</head>
+<body>
+    <h1> Mercedes-Benz CLS 63 AMG S 4MATIC+ — Продаж </h1>
+    <h2> Опис </h2>
+    <p class="text"> До продажу пропонується Mercedes-Benz CLS 63 AMG S — преміальний спортивний седан, що поєднує елегантність купе та потужність справжнього AMG. 
+    <br> Автомобіль у відмінному стані, повністю обслужений, з підтвердженою історією обслуговування та офіційним походженням. 
+    <br> Комплектація включає: AMG Performance Package, керамічні гальма, пневмопідвіску, спортивні сидіння з масажем, Burmester аудіосистему.
+    <br> Авто готове до тест-драйву за попереднім записом. </p>
+    <h2> Галерея </h2>
+    <div class="gallery">
+    <img src="https://automedia.com.ua/wp-content/uploads/2025/05/26c11c4212197715fc964e9c599665ee.jpg"
+     alt="Mercedes CLS 63 AMG S front view" class="large">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKjGkQsWRUncg_4vDpn22r1J8xrfB52InI3Q&s"
+     alt="Mercedes CLS 63 AMG S side view" class="small tilt-left">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTz-b0k8LUQNsQL0EwZ3lnpRIxs-wjgkywKDZuacly5p22gIlNzaWt5yRmlX9waNneIb8&usqp=CAU"
+     alt="Mercedes CLS 63 AMG S exterior" class="small tilt-right">
+    <img src="https://www.lamborghinigoldcoast.com/imagetag/4398/7/l/Used-2015-Mercedes-Benz-CLS-Class-CLS63-AMG-S-Model-1422738442.jpg"
+     alt="Mercedes CLS 63 AMG S rear" class="medium">
+    <img src="https://automedia.com.ua/wp-content/uploads/2025/05/48d17ac69e3058de-large.jpg"
+     alt="Mercedes CLS 63 AMG S interior" class="medium">
+    </div>
+    <section class="specs">
+    <h2> Технічні характеристики </h2>
+    <table>
+        <tr>
+            <th>Ціна</th>
+            <th>6.900.000 грн</th>
+        </tr>
+        <tr>
+            <th>Модель</th>
+            <td>Mercedes-Benz CLS 63 AMG S 4MATIC+</td>
+        </tr>
+        <tr>
+            <th>Рік</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>Двигун</th>
+            <td>4.0L V8 Bi-Turbo — 612 к.с.</td>
+        </tr>
+        <tr>
+            <th>Привід</th>
+            <td>4MATIC+ (повний)</td>
+        </tr>
+        <tr>
+            <th>КПП</th>
+            <td>9-ступінчаста AMG Speedshift</td>
+        </tr>
+        <tr>
+            <th>Пробіг</th>
+            <td>~33 000 км</td>
+        </tr>
+        <tr>
+            <th>Колір</th>
+            <td>Obsidian Black Metallic</td>
+        </tr>
+        <tr>
+            <th>Пальне</th>
+            <td>Бензин</td>
+        </tr>
+    </table>
+   </section>
+   <section class="advantages">
+    <h2> Переваги </h2>
+    <ul>
+        <li> Офіційний автомобіль Mercedes-Benz </li>
+        <li> AMG S-версія — найпотужніша модифікація </li>
+        <li> Без ДТП, повна сервісна історія </li>
+        <li> Преміальна комплектація з усіма опціями </li>
+        <li> Динаміка 0–100 км/год за 3.5 секунди </li>
+    </ul>
+   </section>
+    <section class="buttons"> 
+    <button onclick="window.location.href='contact.html'" class="btn order">Замовити</button>
+    <button onclick="window.location.href='catalog.html'" class="btn catalog">Повернутись до каталогу</button>
+    <button onclick="addToCart('Mercedes-Benz CLS 63 AMG S 4MATIC+')" class="btn favorite">Додати до вибраних</button>
+</section>
+    <footer>
+        <p> &copy; AutoGalaxy</p>
+    </footer>
+     <script>
+        function addToCart(carName) {
+          let cars = JSON.parse(localStorage.getItem('selectedCars')) || [];
+          if (!cars.includes(carName)) {
+            cars.push(carName);
+            localStorage.setItem('selectedCars', JSON.stringify(cars));
+            alert(carName + " додано до вибраних!");
+          } else {
+            alert(carName + " вже є у вибраних!");
+          }
+        }
+    </script>
+</body>
+</html>
+ 
