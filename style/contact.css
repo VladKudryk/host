@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #2b2b2b;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://zefirka.club/uploads/posts/2022-10/1666163418_1-zefirka-club-p-oboi-na-rabochii-stol-krasno-chernie-1.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.45;
+  z-index: -1;
+}
+
+header {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://i.pinimg.com/736x/7c/09/4e/7c094efb3038d855ee3b1a2150e9f2b9.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+}
+
+header h1 {
+  position: absolute;
+  margin-bottom: -90px;
+  margin-left: -40px;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: rgb(199, 42, 42);
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 #880000, 2px 2px 0 #550000, 3px 3px 5px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to top, #ff0000, #ff4d4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav {
+  font-family: "Times New Roman", Times, serif;
+  margin-top: -130px;
+  position: relative;
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  color: azure;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+  display: block;
+}
+
+.dropbtn {
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgb(95, 11, 11);
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.dropbtn:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 0, 0, 0.5);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 1000;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #421212;
+  min-width: 180px;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+  overflow: hidden;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(15px);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+form {
+  width: 60%;
+  margin: 150px auto 50px auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff4d4d;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: 1px solid #ff3333;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 10px #ff0000;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #ff3333;
+  text-shadow: 0 0 15px red;
+}
+
+#carList li {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: listAppear 0.5s forwards;
+}
+
+#carList li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+#carList li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+#carList li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes listAppear {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+button[type=submit]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.7);
+}
+
+button:last-child {
+  background: linear-gradient(45deg, #333, #666);
+  color: #fff;
+}
+
+button:last-child:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+button {
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  margin-right: 15px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 15px rgba(255, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+button[type=submit] {
+  background: linear-gradient(45deg, #ff0000, #ff4d4d);
+  color: #fff;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  margin-bottom: -20px;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 2px solid #ff0000;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3764705882);
+  font-family: "Poppins", sans-serif;
+  z-index: 5;
+  position: bottom;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+    padding: 25px;
+  }
+  header h1 {
+    font-size: 32px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}/*# sourceMappingURL=contact.css.map */
